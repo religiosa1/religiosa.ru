@@ -2,6 +2,8 @@
 title: Бигос
 slug: bigos
 originalTitle: bigos
+recommended:
+  - kiszona-kapusta
 time: 1.5..2h
 waiting: 1d
 ingredients:
@@ -13,11 +15,15 @@ ingredients:
   - { name: колбаски, quant: "150 г" }
   - { name: луковица, quant: "1 шт." }
   - { name: чернослив, quant: "3 шт" }
-  - { name: сушёные грибы, quant: "10 г" }
+  - { name: сушёные грибы, quant: "20 г" }
   - { name: томатная паста, quant: "30 мл." }
   - { name: сухое красное вино, quant: "200 мл" }
-  - { name: приправы, desc: "лавровый лист, душистый перец, чёрный перец, можевельник, паприка, тмин, тимьян, горчица, сахар" }
+  - {
+      name: приправы,
+      desc: "лавровый лист, душистый перец, чёрный перец, можевельник, паприка, тмин, тимьян, горчица, сахар",
+    }
 sources:
+  - https://youtu.be/msm8ODVuEp8
   - https://www.zajadam.pl/pomysl-na/bigos
   - https://www.youtube.com/watch?v=Oqg_cO4s8ik
 ---

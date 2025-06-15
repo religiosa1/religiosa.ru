@@ -2,6 +2,8 @@
 title: Кващница (гуральские кислые щи)
 slug: kwasnica
 originalTitle: kwaśnica
+recommended:
+  - kiszona-kapusta
 time: 2..2.5h
 waiting: 2h
 ingredients:
@@ -17,10 +19,7 @@ ingredients:
   - { name: тмин, quant: 2 ч. л. }
   - { name: вода, quant: 3 л }
   - { name: черный перец }
-  - {
-      name: сок с квашеной капусты,
-      desc: "опционально, по вкусу для соли и кислоты",
-    }
+  - { name: сок с квашеной капусты, desc: "опционально, по вкусу для соли и кислоты" }
   - { name: соль, desc: по вкусу }
   - { name: хлеб, desc: для подачи }
 sources:
