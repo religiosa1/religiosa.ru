@@ -19,7 +19,7 @@ title: "Интересный софт и библиотеки"
 
 ### Консольные проводники
 
-- [Yazi](https://github.com/sxyazi/yazi) на текущий момент (05.01.2025) в альфе
+- [Yazi](https://github.com/sxyazi/yazi) на текущий момент (02.07.2025) в бете
 - [Broot](https://dystroy.org/broot/)
 
 ### Хорошие консольные альтернативы для родных юниксовых команд
@@ -33,6 +33,8 @@ title: "Интересный софт и библиотеки"
 git branch --format="%(refname:short)" | fzf -m --bind 'enter:become(git branch -D {+})'
 ```
 
+выбор веток осуществляется через Tab, Enter удалит выбранные ветки
+
 - [fd](https://github.com/sharkdp/fd) Более удобный find
 - [eza](https://github.com/eza-community/eza) Красивенький ls
 - [atuin](https://atuin.sh/) История консоли (только юникс)
@@ -40,3 +42,4 @@ git branch --format="%(refname:short)" | fzf -m --bind 'enter:become(git branch 
 ### Прочее
 
 - [ratatui](https://ratatui.rs/) TUI-фреймворк для раста
+- [Bubble Tea](https://github.com/charmbracelet/bubbletea) TUI-фреймворк для го
