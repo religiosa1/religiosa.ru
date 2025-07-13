@@ -10,6 +10,8 @@ title: "Интересный софт и библиотеки"
 ## Тулинг
 
 - [ImHex](https://imhex.werwolv.net/) [опенсорсный](https://github.com/WerWolv/ImHex) HEX-редактор
+- [nvim.hex](https://github.com/RaafatTurki/hex.nvim) просто плагин к neovim для использования как hex-редактора через xxd,
+  но он настолько хорош, что я его отдельно сюда запишу, чтобы не забыть
 - [MailPit](https://mailpit.axllent.org/) для тестирования отправки имейлов, заместо устаревшего MailHog'a
 - [Tokei](https://github.com/XAMPPRocky/tokei) TUI подсчёт строчек кода
 - [Dust](https://github.com/bootandy/dust) TUI анализатор используемого диского просранства
@@ -38,6 +40,7 @@ git branch --format="%(refname:short)" | fzf -m --bind 'enter:become(git branch 
 - [fd](https://github.com/sharkdp/fd) Более удобный find
 - [eza](https://github.com/eza-community/eza) Красивенький ls
 - [atuin](https://atuin.sh/) История консоли (только юникс)
+- [tealdeer](https://github.com/tealdeer-rs/tealdeer) tldr для man-страниц
 
 ### Прочее
 
