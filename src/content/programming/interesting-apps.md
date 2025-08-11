@@ -18,6 +18,7 @@ title: "Интересный софт и библиотеки"
 - [Bottom](https://github.com/ClementTsang/bottom) консольный анализатор потребляемых компьютером ресурсов
 - [Bandwhich](https://github.com/imsnif/bandwhich) консольный анализатор сетевого трафика
 - [xh](https://github.com/ducaale/xh) удобный HTTP-клиент с опциональной трансляцией комманд в cURL
+- [hurl](https://github.com/Orange-OpenSource/hurl) HTTP-client работающий по текстовым файлам (а-ля [httpYac](https://httpyac.github.io/)),
 
 ### Консольные проводники
 
