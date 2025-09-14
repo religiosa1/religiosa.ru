@@ -42,6 +42,7 @@ git branch --format="%(refname:short)" | fzf -m --bind 'enter:become(git branch 
 - [eza](https://github.com/eza-community/eza) Красивенький ls
 - [atuin](https://atuin.sh/) История консоли (только юникс)
 - [tealdeer](https://github.com/tealdeer-rs/tealdeer) tldr для man-страниц
+- [dysk] (https://github.com/Canop/dysk) удобный просмотрщик доступного пространства в консоле
 
 ### Прочее
 
