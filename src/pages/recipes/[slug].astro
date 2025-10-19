@@ -1,23 +1,23 @@
 ---
-import { CollectionEntry, getCollection } from "astro:content";
+import { type CollectionEntry, getCollection } from "astro:content";
 import BaseLayout from "~/components/BaseLayout.astro";
 import { Breadcrumbs, BreadcrumbsLink } from "~/components/Breadcrumbs";
 import Duration from "~/components/Duration.astro";
 import Ingredients from "~/components/Ingredients.astro";
 
 interface Props {
-	article: CollectionEntry<"recepies">;
-	recommended: CollectionEntry<"recepies">[];
+	article: CollectionEntry<"recipes">;
+	recommended: CollectionEntry<"recipes">[];
 }
 
 export async function getStaticPaths() {
-	const recepies = await getCollection("recepies");
-	return recepies.map((article) => ({
+	const recipes = await getCollection("recipes");
+	return recipes.map((article) => ({
 		params: { slug: article.slug, },
 		props: {
 			article,
 			recommended: article.data.recommended?.length ?
-				article.data.recommended.map( i => recepies.find(j => j.slug === i))
+				article.data.recommended.map( i => recipes.find(j => j.slug === i))
 				: [],
 		},
 	}) );
@@ -35,7 +35,7 @@ const { Content } = await article.render()
 
 	<Breadcrumbs current={article.data.title}>
 		<BreadcrumbsLink to="/">Главная страница</BreadcrumbsLink>
-		<BreadcrumbsLink to="/recepies/">Кулинарные рецепты</BreadcrumbsLink>
+		<BreadcrumbsLink to="/recipes/">Кулинарные рецепты</BreadcrumbsLink>
 	</Breadcrumbs>
 
 	<article>
@@ -70,7 +70,7 @@ const { Content } = await article.render()
 		{ !!recommended?.length && (<>
 			<h3>Рекомендации</h3>
 			{ recommended.filter((r) => r).map((r) => (
-				<a href={"/recepies/" + r.slug} class="b-link">{r.data.title}</a>
+				<a href={"/recipes/" + r.slug} class="b-link">{r.data.title}</a>
 			))}
 		</>)}
 	</article>
