@@ -6,7 +6,7 @@ waiting: 8h
 time: 2h
 ingredients:
   - { name: белая фасоль, quant: "250гр" }
-  - { name: репчатый лук, quant: "5шт", alt: "200 г" }
+  - { name: репчатый лук, quant: "3шт", alt: "200 г" }
   - { name: чеснок, quant: "2 зубчика" }
   - { name: лавровый лист, quant: "2 шт" }
   - { name: паприка, quant: "2 ч. ложки с горкой" }
