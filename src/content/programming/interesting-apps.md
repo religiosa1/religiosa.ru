@@ -51,6 +51,6 @@ git branch --format="%(refname:short)" | fzf -m --bind 'enter:become(git branch 
 - [ratatui](https://ratatui.rs/) TUI-фреймворк для раста
 - [Bubble Tea](https://github.com/charmbracelet/bubbletea) TUI-фреймворк для го.
   к нему же:
-  - великолепный враппер для шел-скриптов: [gum](https://github.com/charmbracelet/gum)
+  - великолепный враппер для шел-скриптов: [gum](https://github.com/charmbracelet/gum) (активно используется в Omarchy)
   - библиотека компонентов [bubbles](https://github.com/charmbracelet/bubbles)
-  - удобная библиотека для создания форм: [huh](https://github.com/charmbracelet/huh) (активно используется в Omarchy)
+  - удобная библиотека для создания форм: [huh](https://github.com/charmbracelet/huh)
