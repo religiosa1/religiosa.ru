@@ -42,9 +42,15 @@ git branch --format="%(refname:short)" | fzf -m --bind 'enter:become(git branch 
 - [eza](https://github.com/eza-community/eza) Красивенький ls
 - [atuin](https://atuin.sh/) История консоли (только юникс)
 - [tealdeer](https://github.com/tealdeer-rs/tealdeer) tldr для man-страниц
-- [dysk] (https://github.com/Canop/dysk) удобный просмотрщик доступного пространства в консоле
+- [dysk](https://github.com/Canop/dysk) удобный просмотрщик доступного пространства в консоле
+- [glow](https://github.com/charmbracelet/glow) читалка маркдаунов на bubble-tea
+- [caligula](https://github.com/ifd3f/caligula) TUI-прожигалка USB-образов
 
 ### Прочее
 
 - [ratatui](https://ratatui.rs/) TUI-фреймворк для раста
-- [Bubble Tea](https://github.com/charmbracelet/bubbletea) TUI-фреймворк для го
+- [Bubble Tea](https://github.com/charmbracelet/bubbletea) TUI-фреймворк для го.
+  к нему же:
+  - великолепный враппер для шел-скриптов: [gum](https://github.com/charmbracelet/gum)
+  - библиотека компонентов [bubbles](https://github.com/charmbracelet/bubbles)
+  - удобная библиотека для создания форм: [huh](https://github.com/charmbracelet/huh) (активно используется в Omarchy)
