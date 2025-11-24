@@ -1,6 +1,4 @@
-
 ---
-
 title: "Настройка режима vim в vscode"
 ---
 
@@ -16,7 +14,7 @@ title: "Настройка режима vim в vscode"
 решил просто пользоваться вторым -- которое чистый эмулятор.
 
 Никаких планинов и не всегда на 100% соответсвует поведению настоящего vim'а,
-но достаточно близко для меня и __относительно__ безгеморойно.
+но достаточно близко для меня и **относительно** безгеморойно.
 
 Чтобы приблизить опыт использования к моим настройкам, мне понадобилось два
 дополниительных расширения:
@@ -41,27 +39,29 @@ title: "Настройка режима vim в vscode"
   // вставка и удаление без копирования в регистр в визуальном режме
   "vim.visualModeKeyBindingsNonRecursive": [
     {
+      // In visual mode, delete WITHOUT putting content into clipboard register
       "before": ["leader", "d"],
       "after": ["\"", "_", "d"]
     },
     {
+      // In visual mode, paste over WITHOUT putting content under cursor into clipboard register
       "before": ["leader", "p"],
       "after": ["p", "g", "v", "y"]
     }
   ],
   "vim.normalModeKeyBindingsNonRecursive": [
-    // расширение неправлиьно обрабатывает движения с пробелом, когда лидер
-    // так же пробел, эти сочетания восставнавливают работоспособность
-    // c<Space> и d<Space> соотвественно
-    {
-      "before": ["c", "<Leader>"],
-      "after": ["c", "l"]
-    },
-    {
-      "before": ["d", "<Leader>"],
-      "after": ["d", "l"]
-    },
-    // скролл и центр
+    // vscode vim extension conflicts on space leader with space motions, remapping them back
+    // This will conflict with the default mapping of camel-case motions, so better to just use
+    // r and x correspondingly
+    // {
+    //   "before": ["c", "<Leader>"],
+    //   "after": ["c", "l"]
+    // },
+    // {
+    //   "before": ["d", "<Leader>"],
+    //   "after": ["d", "l"]
+    // },
+    // scroll and center
     {
       "before": ["<C-d>"],
       "after": ["<C-d>", "z", "z"]
@@ -70,7 +70,7 @@ title: "Настройка режима vim в vscode"
       "before": ["<C-u>"],
       "after": ["<C-u>", "z", "z"]
     },
-    // настройки для Flash-vscode
+    // Flash-vscode keybindings
     {
       "before": ["s"],
       "commands": ["flash-vscode.start"]
@@ -83,7 +83,7 @@ title: "Настройка режима vim в vscode"
       "before": ["<BS>"],
       "commands": ["flash-vscode.backspace"]
     },
-    // Настройки сочетания с лидером, для консистентности с lazyvim
+    // Some leader settings for consistency with lazyvim
     {
       "before": ["<leader>", "<space>"],
       "commands": ["workbench.action.quickOpen"]
@@ -110,11 +110,11 @@ title: "Настройка режима vim в vscode"
     }
   ],
   "vim.useSystemClipboard": true,
-  // выделение цветом yank'а как в neovim
+  "vim.camelCaseMotion.enable": true,
   "vim.highlightedyank.enable": true,
   "vim.highlightedyank.color": "#ff966c",
   "vim.highlightedyank.textColor": "#1b1d2b",
-  "editor.lineNumbers": "on"
+  "editor.lineNumbers": "relative"
 }
 ```
 
@@ -124,24 +124,24 @@ title: "Настройка режима vim в vscode"
 {
   // FilesExplorer settings
   {
-    "key": "a",
-    "command": "explorer.newFile",
-    "when": "filesExplorerFocus && !inputFocus"
+    "key": "ctrl+h",
+    "command": "workbench.action.navigateLeft",
+    "when": "vim.active && vim.mode != 'Insert'"
   },
   {
-    "key": "r",
-    "command": "renameFile",
-    "when": "filesExplorerFocus && !inputFocus"
+    "key": "ctrl+j",
+    "command": "workbench.action.navigateDown",
+    "when": "vim.active && vim.mode != 'Insert'"
   },
   {
-    "key": "shift+n",
-    "command": "explorer.newFolder",
-    "when": "explorerViewletFocus"
+    "key": "ctrl+k",
+    "command": "workbench.action.navigateUp",
+    "when": "vim.active && vim.mode != 'Insert'"
   },
   {
-    "key": "d",
-    "command": "deleteFile",
-    "when": "filesExplorerFocus && !inputFocus"
+    "key": "ctrl+l",
+    "command": "workbench.action.navigateRight",
+    "when": "vim.active && vim.mode != 'Insert'"
   },
   // couple of extra settings, for file view to be in line with yazi
   {
