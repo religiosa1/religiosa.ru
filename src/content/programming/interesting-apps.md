@@ -20,6 +20,7 @@ title: "Интересный софт и библиотеки"
 - [hurl](https://github.com/Orange-OpenSource/hurl) HTTP-client работающий по текстовым файлам (а-ля [httpYac](https://httpyac.github.io/))
 - [difftastic](https://difftastic.wilfred.me.uk/) семантический диффер
 - [lazygit](https://github.com/jesseduffield/lazygit), [lazydocker](https://github.com/jesseduffield/lazydocker), [lazyvim](https://www.lazyvim.org/)
+- [knip](https://knip.dev/) анализатор мертвого кода для тайпскрипта
 
 ### Консольные проводники
 
