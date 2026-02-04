@@ -41,6 +41,12 @@ git branch --format="%(refname:short)" | fzf -m --bind 'enter:become(git branch 
 
 выбор веток осуществляется через Tab, Enter удалит выбранные ветки
 
+Для удаления веток на ремоуте:
+
+```sh
+git branch -r --format="%(refname:short)" | grep '^origin/' | sed 's|^origin/||' | fzf -m --bind 'enter:become(git push -d origin {+})'
+```
+
 - [fd](https://github.com/sharkdp/fd) Более удобный find
 - [eza](https://github.com/eza-community/eza) Красивенький ls
 - [zoxide](https://github.com/ajeetdsouza/zoxide) cd с фуззи-поиском, абсолютно великолепная вещь
