@@ -13,7 +13,7 @@ ingredients:
   - { name: соль, quant: "0.5 ч.л.", alt: "на фарш" }
   - { name: перец, quant: "0.5 ч.л." }
 sources:
-  - https://youtu.be/msm8ODVuEp8
+  - https://www.youtube.com/watch?v=Se7A2p8QcLo
   - https://molohovetc.ru/otdel_xvi/1696pelmeni_sibirskie/
 ---
 
