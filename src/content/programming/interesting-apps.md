@@ -22,10 +22,12 @@ title: "Интересный софт и библиотеки"
 - [lazygit](https://github.com/jesseduffield/lazygit), [lazydocker](https://github.com/jesseduffield/lazydocker), [lazyvim](https://www.lazyvim.org/)
 - [knip](https://knip.dev/) анализатор мертвого кода для тайпскрипта
 
-### Консольные проводники
+### Консольные проводники и утилиты
 
 - [Yazi](https://github.com/sxyazi/yazi)
 - [Broot](https://dystroy.org/broot/) -- рассматривал его когда-то, но теперь однозначно на yazi
+- [https://docs.matcha.floatpane.com/](https://docs.matcha.floatpane.com/) - Email клиент
+- [vi-sql](https://vi-sql.com/) консольный аналог dbeaver
 
 ### Хорошие консольные альтернативы для родных юниксовых команд
 
