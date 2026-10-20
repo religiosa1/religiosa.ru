@@ -1,4 +1,6 @@
 import { defineConfig } from "astro/config";
+import { unified } from "@astrojs/markdown-remark";
+import remarkToc from "remark-toc";
 
 export default defineConfig({
   site: "http://notes.religiosa.ru",
@@ -16,9 +18,8 @@ export default defineConfig({
       // Enable word wrap to prevent horizontal scrolling
       wrap: true,
     },
-    remarkPlugins: [
-      "remark-gfm",
-      ["remark-toc", { heading: "оглавление|содержание" }],
-    ],
+    processor: unified({
+      remarkPlugins: [[remarkToc, { heading: "оглавление|содержание" }]],
+    }),
   },
 });

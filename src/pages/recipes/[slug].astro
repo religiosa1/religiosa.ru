@@ -1,5 +1,5 @@
 ---
-import { type CollectionEntry, getCollection } from "astro:content";
+import { type CollectionEntry, getCollection, render } from "astro:content";
 import BaseLayout from "~/components/BaseLayout.astro";
 import { Breadcrumbs, BreadcrumbsLink } from "~/components/Breadcrumbs";
 import Duration from "~/components/Duration.astro";
@@ -13,18 +13,18 @@ interface Props {
 export async function getStaticPaths() {
 	const recipes = await getCollection("recipes");
 	return recipes.map((article) => ({
-		params: { slug: article.slug, },
+		params: { slug: article.id, },
 		props: {
 			article,
 			recommended: article.data.recommended?.length ?
-				article.data.recommended.map( i => recipes.find(j => j.slug === i))
+				article.data.recommended.map( i => recipes.find(j => j.id === i))
 				: [],
 		},
 	}) );
 }
 
 const { article, recommended } = Astro.props as Props;
-const { Content } = await article.render()
+const { Content } = await render(article)
 ---
 
 <BaseLayout title={article.data.title}>
@@ -70,7 +70,7 @@ const { Content } = await article.render()
 		{ !!recommended?.length && (<>
 			<h3>Рекомендации</h3>
 			{ recommended.filter((r) => r).map((r) => (
-				<a href={"/recipes/" + r.slug} class="b-link">{r.data.title}</a>
+				<a href={"/recipes/" + r.id} class="b-link">{r.data.title}</a>
 			))}
 		</>)}
 	</article>

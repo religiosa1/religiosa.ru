@@ -2,14 +2,14 @@
 	export interface Props {
 		articles: Array<{
 			data: { title: string };
-			slug: string;
+			id: string;
 		}>
 	}
 	const { articles } = Astro.props as Props;
 ---
 <nav class="articles-list">
 	{articles.map((article) => (
-			<a href={`./${article.slug}`} class="articles-list__link">
+			<a href={`./${article.id}`} class="articles-list__link">
 				{article.data.title}
 			</a>
 		)

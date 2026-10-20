@@ -10,8 +10,9 @@
     "preview": "astro preview"
   },
   "devDependencies": {
-    "astro": "^5.14.6",
+    "@astrojs/markdown-remark": "^7.3.3",
+    "astro": "^7.4.1",
     "remark-toc": "^9.0.0",
-    "ts-pattern": "^5.8.0"
+    "ts-pattern": "^5.9.2"
   }
 }
